@@ -23,6 +23,10 @@
   padding: 8px;
 }
 
+.missions tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 button {
   background: inherit;
   border: 0.5px solid lightslategray;

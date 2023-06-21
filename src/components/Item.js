@@ -4,14 +4,14 @@ import './styles/Item.css';
 
 const Item = (props) => {
   const {
-    Mission, Description,
+    Mission, Description, isEven,
   } = props;
 
   return (
-    <tbody>
-      <tr>
+    <tbody className="tbody">
+      <tr style={{ backgroundColor: isEven ? '#f2f2f2' : 'transparent' }}>
         <td><h3>{Mission}</h3></td>
-        <td><p>{Description}</p></td>
+        <td><p className="description">{Description}</p></td>
         <td><button type="button">Activate Member</button></td>
         <td><button type="button">Join Mission</button></td>
       </tr>
@@ -22,6 +22,7 @@ const Item = (props) => {
 Item.propTypes = {
   Mission: PropTypes.string.isRequired,
   Description: PropTypes.string.isRequired,
+  isEven: PropTypes.bool.isRequired,
 };
 
 export default Item;

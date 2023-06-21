@@ -32,11 +32,12 @@ const Missions = () => {
             <th>Actions</th>
           </tr>
         </thead>
-        {missionItems.map((mission) => (
+        {missionItems.map((mission, i) => (
           <Item
             Mission={mission.mission_name}
             Description={mission.description}
             key={mission.mission_id}
+            isEven={i % 2 === 0}
           />
         ))}
       </table>
