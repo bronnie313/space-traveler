@@ -12,9 +12,15 @@
 }
 
 .missions {
-  border: 1px solid #e8e8e8;
-  padding: 10px;
+  border-collapse: collapse;
+  width: 100%;
   border-radius: 5px;
+}
+
+.missions td,
+.missions th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 button {
