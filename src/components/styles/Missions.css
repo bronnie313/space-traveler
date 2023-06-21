@@ -16,3 +16,15 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+button {
+  background: inherit;
+  border: 0.5px solid lightslategray;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.description {
+  border: none;
+  margin: 0;
+}
