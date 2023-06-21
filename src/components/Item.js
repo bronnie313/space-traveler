@@ -12,8 +12,8 @@ const Item = (props) => {
       <tr style={{ backgroundColor: isEven ? '#f2f2f2' : 'transparent' }}>
         <td><h3>{Mission}</h3></td>
         <td><p className="description">{Description}</p></td>
-        <td><button type="button">Activate Member</button></td>
-        <td><button type="button">Join Mission</button></td>
+        <td style={{ width: '120px' }}><button type="button">Activate Member</button></td>
+        <td style={{ width: '100px' }}><button type="button">Join Mission</button></td>
       </tr>
     </tbody>
   );
