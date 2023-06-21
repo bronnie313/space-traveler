@@ -16,7 +16,7 @@ const Nav = () => (
       <div className="nav-link">
         <ul>
           <li><NavLink to="rockets">Rockets</NavLink></li>
-          <li><NavLink to="missions">Missions</NavLink></li>
+          <li><NavLink to="Missions">Missions</NavLink></li>
           <li><NavLink to="profile">My Profile</NavLink></li>
         </ul>
       </div>
