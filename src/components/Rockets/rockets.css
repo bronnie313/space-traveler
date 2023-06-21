@@ -1,3 +1,38 @@
 .rockets {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rocket-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rocket-list-item {
+  display: flex;
+  gap: 2rem;
+}
+
+.rocket-img-div > img {
+  width: 15rem;
+  transition: transform 0.2s;
+  border-radius: 2%;
+}
+
+.rocket-img-div > img:hover {
+  transform: scale(1.1);
+}
+
+.reserve-btn {
+  padding: 0.5rem;
+  border-radius: 5%;
+  border: 1px solid rgb(3 117 240);
+  color: #ffff;
+  background-color: rgb(0 123 255);
+}
+
+.reserve-btn:hover {
+  background-color: rgb(0 74 255);
 }
