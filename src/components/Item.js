@@ -10,9 +10,9 @@ const Item = (props) => {
   return (
     <tbody className="tbody">
       <tr style={{ backgroundColor: isEven ? '#f2f2f2' : 'transparent' }}>
-        <td><h3>{Mission}</h3></td>
+        <td style={{ width: '200px' }}><h3>{Mission}</h3></td>
         <td><p className="description">{Description}</p></td>
-        <td style={{ width: '120px' }}><button type="button">Activate Member</button></td>
+        <td style={{ width: '100px' }}><button type="button">Not Member</button></td>
         <td style={{ width: '100px' }}><button type="button">Join Mission</button></td>
       </tr>
     </tbody>
