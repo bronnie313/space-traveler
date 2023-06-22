@@ -2,3 +2,14 @@
   display: flex;
   justify-content: center;
 }
+
+.activeBtn {
+  border: 1px solid red;
+  color: red;
+}
+
+.activeText {
+  background: #18a2b8;
+  color: white;
+  border: none;
+}

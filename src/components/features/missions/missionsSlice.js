@@ -6,7 +6,7 @@ const url = 'https://api.spacexdata.com/v3/missions';
 const initialState = {
   missionItems: [],
   isLoading: true,
-  active: true,
+  active: false,
 };
 
 export const getMissions = createAsyncThunk('mission/getMissions', async () => {
