@@ -23,6 +23,14 @@ const missionsSlice = createSlice({
   initialState,
   reducers: {
     joinMission: (state) => {
+      // const missionId = action.payload
+      // const mission = state.active.missionItems.filter((item) => {
+      //   if(item.mission_id === missionId){
+      //     item.active = true;
+      //     return item;
+      //     }
+      //     return item;
+      // })
       state.active = true;
     },
     leaveMission: (state) => {

@@ -13,3 +13,9 @@
   color: white;
   border: none;
 }
+
+.inactiveBtn {
+  background: #6d757d;
+  color: white;
+  border: none;
+}

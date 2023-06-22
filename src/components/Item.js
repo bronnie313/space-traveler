@@ -6,20 +6,22 @@ import { joinMission, leaveMission } from './features/missions/missionsSlice';
 
 const Item = (props) => {
   const {
-    Mission, Description, isEven,
+    Mission, Description, isEven, missionId
   } = props;
 
-  const active = useSelector((state) => state.mission.active)
+  const active = useSelector((state) => state.mission.active);
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
     e.preventDefault();
-    if(active) {
-      dispatch(leaveMission())
+    if (active) {
+      dispatch(leaveMission());
     } else {
-      dispatch(joinMission())
+      dispatch(joinMission());
     }
-  }
+  };
+
+
 
   return (
     <tbody className="tbody">
@@ -27,12 +29,13 @@ const Item = (props) => {
         <td style={{ width: '200px' }}><h3>{Mission}</h3></td>
         <td><p className="description">{Description}</p></td>
         <td style={{ width: '120px' }}>
-          <button type="button" className={active ? 'activeText' : ''}>
-          {active ? 'Active Member' : 'Not A Member'}
-          </button></td>
+          <button type="button" className={active ? 'activeText' : 'inactiveBtn'}>
+            {active ? 'Active Member' : 'Not A Member'}
+          </button>
+        </td>
         <td style={{ width: '100px' }}>
           <button type="button" onClick={handleClick} className={active ? 'activeBtn' : ''}>
-          {active ? 'Leave Mission' : 'Join Mission'}
+            {active ? 'Leave Mission' : 'Join Mission'}
           </button>
         </td>
       </tr>
@@ -44,6 +47,7 @@ Item.propTypes = {
   Mission: PropTypes.string.isRequired,
   Description: PropTypes.string.isRequired,
   isEven: PropTypes.bool.isRequired,
+  missionId: PropTypes.string.isRequired,
 };
 
 export default Item;
