@@ -41,6 +41,24 @@
   background-color: rgb(0 74 255);
 }
 
+.reserved-active {
+  background-color: aliceblue;
+  color: rgb(61, 59, 59);
+  border: 1px solid rgb(61, 59, 59);
+}
+
+.reserved-active:hover {
+  background-color: rgb(237, 240, 243);
+}
+
+.reserved-badge {
+  background-color: #18a2b8;
+  color: whitesmoke;
+  border-radius: 15%;
+  margin: 5px;
+  padding: 2px;
+}
+
 .error {
   display: flex;
   justify-content: center;
