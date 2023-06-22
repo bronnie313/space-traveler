@@ -1,27 +1,24 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import './styles/Item.css';
 import { joinMission, leaveMission } from './features/missions/missionsSlice';
 
 const Item = (props) => {
   const {
-    Mission, Description, isEven, missionId
+    Mission, Description, isEven, missionId, active,
   } = props;
 
-  const active = useSelector((state) => state.mission.active);
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
     e.preventDefault();
     if (active) {
-      dispatch(leaveMission());
+      dispatch(leaveMission(missionId));
     } else {
-      dispatch(joinMission());
+      dispatch(joinMission(missionId));
     }
   };
-
-
 
   return (
     <tbody className="tbody">
@@ -48,6 +45,7 @@ Item.propTypes = {
   Description: PropTypes.string.isRequired,
   isEven: PropTypes.bool.isRequired,
   missionId: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
 };
 
 export default Item;
