@@ -19,7 +19,14 @@ export const rocketsSlice = createSlice({
   initialState,
   reducers: {
     createReservation: (state, { payload }) => {
-      state.reservations.push(payload.reservation);
+      const newRocketList = state.rocketLists.map((rocket) => {
+        const { id, reserved } = rocket;
+        if (id === payload) {
+          return { ...rocket, reserved: (reserved === true ? false : true) }; // eslint-disable-line
+        }
+        return rocket;
+      });
+      state.rocketLists = newRocketList;
     },
   },
   extraReducers: (builder) => {
@@ -31,7 +38,8 @@ export const rocketsSlice = createSlice({
         state.isLoading = false;
         const tmpList = [];
         action.payload.forEach((rocket) => {
-          tmpList.push({ ...rocket, reserved: false });
+          const { id, name, description, flickr_images } = { ...rocket }; // eslint-disable-line
+          tmpList.push({ id: id, name: name, description: description, flickr_images: flickr_images, reserved: false }); // eslint-disable-line
         });
         state.rocketLists = tmpList;
       })
