@@ -38,8 +38,8 @@ export const rocketsSlice = createSlice({
         state.isLoading = false;
         const tmpList = [];
         action.payload.forEach((rocket) => {
-          const { id, name, description, flickr_images } = { ...rocket }; // eslint-disable-line
-          tmpList.push({ id: id, name: name, description: description, flickr_images: flickr_images, reserved: false }); // eslint-disable-line
+          const { id, name, description, flickr_images, type } = { ...rocket }; // eslint-disable-line
+          tmpList.push({ id: id, name: name, description: description, flickr_images: flickr_images, type: type, reserved: false }); // eslint-disable-line
         });
         state.rocketLists = tmpList;
       })
