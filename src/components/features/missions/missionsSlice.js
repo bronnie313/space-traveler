@@ -5,7 +5,7 @@ const url = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = {
   missionItems: [],
-  // isLoading: true,
+  isLoading: false,
 };
 
 export const getMissions = createAsyncThunk('mission/getMissions', async () => {
@@ -44,10 +44,6 @@ const missionsSlice = createSlice({
       .addCase(getMissions.fulfilled, (state, action) => {
         state.missionItems = action.payload;
         state.isLoading = false;
-
-        // action.payload.forEach((mission) => {
-        //   console.log(mission.mission_id);
-        // })
       })
       .addCase(getMissions.rejected, (state) => {
         state.isLoading = false;

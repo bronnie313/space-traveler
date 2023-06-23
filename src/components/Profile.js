@@ -2,10 +2,18 @@ import React from 'react';
 import './styles/Profile.css';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
+import ReservedRocketItem from './Profile/ReservedRocketItem';
+
+const Reserved = ({ rockets }) => rockets.map(
+  (rocket) => <ReservedRocketItem key={rocket.id} rocket={rocket} />,
+);
 
 const Profile = () => {
   let missionItems = useSelector((store) => store.mission.missionItems);
   missionItems = missionItems.filter((items) => items.active);
+
+  const rocketList = useSelector((action) => action.rockets.rocketLists);
+  const reservedRockets = rocketList.filter((rocket) => rocket.reserved);
 
   return (
     <section className="profile-part">
@@ -26,9 +34,7 @@ const Profile = () => {
       <div className="my-rockets">
         <h2 className="rockets-title">My Rockets</h2>
         <div className="profile-items">
-          <p>Falcon 9</p>
-          <p>Falcon 9</p>
-          <p>Starship</p>
+          {reservedRockets.length > 0 ? <Reserved rockets={reservedRockets} /> : 'No Rocket Reserved'}
         </div>
       </div>
     </section>
@@ -46,4 +52,5 @@ const JoinedMission = (props) => {
 JoinedMission.propTypes = {
   Mission: PropTypes.string.isRequired,
 };
+
 export default Profile;

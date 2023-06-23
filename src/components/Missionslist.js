@@ -1,17 +1,11 @@
-import React, { useEffect } from 'react';
 import './styles/Missions.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { getMissions } from './features/missions/missionsSlice';
+import { useSelector } from 'react-redux';
 import Item from './Item';
 
 const Missions = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const { missionItems, isLoading } = useSelector((store) => store.mission);
-
-  useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
 
   if (isLoading) {
     return (
