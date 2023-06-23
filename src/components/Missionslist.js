@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import Item from './Item';
 
 const Missions = () => {
-
   const { missionItems, isLoading } = useSelector((store) => store.mission);
 
   if (isLoading) {
