@@ -36,8 +36,10 @@ const Missions = () => {
           <Item
             Mission={mission.mission_name}
             Description={mission.description}
+            missionId={mission.mission_id}
             key={mission.mission_id}
             isEven={i % 2 === 0}
+            active={mission.active}
           />
         ))}
       </table>
