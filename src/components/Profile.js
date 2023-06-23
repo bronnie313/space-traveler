@@ -1,10 +1,7 @@
 import React from 'react';
 import './styles/Profile.css';
-// import { useSelector } from 'react-redux';
 
 const Profile = () => (
-// let missionItems = useSelector((store) => store.mission.missionItems);
-// missionItems = missionItems.filter((items) => items.active);
 
   <section className="profile-part">
     <div className="my-missions">
