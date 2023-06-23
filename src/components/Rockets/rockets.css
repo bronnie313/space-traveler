@@ -52,11 +52,13 @@
 }
 
 .reserved-badge {
-  background-color: #18a2b8;
+  background-color: #1693a7;
   color: whitesmoke;
   border-radius: 15%;
-  margin: 5px;
+  margin: 0 5px 0 0;
   padding: 2px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .error {
