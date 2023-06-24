@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import Rockets from '../Rockets/Rockets';
+import Profile from '../Profile';
 import store from '../features/store';
 
-describe('Rockets Components test suits', () => {
-  test('Should render Rockets component correctly', () => {
+describe('Profile Components test suits', () => {
+  test('Should profile Item component correctly', () => {
     const container = render(
       <Provider store={store}>
-        <Rockets />
+        <Profile />
       </Provider>,
     );
     expect(container).toMatchSnapshot();

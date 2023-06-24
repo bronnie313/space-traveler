@@ -31,7 +31,7 @@ const Missions = () => {
             missionId={mission.mission_id}
             key={mission.mission_id}
             isEven={i % 2 === 0}
-            active={mission.active}
+            active={(mission.active !== null ? mission.active : false)}
           />
         ))}
       </table>
