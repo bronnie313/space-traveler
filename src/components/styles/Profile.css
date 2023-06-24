@@ -1,0 +1,15 @@
+.profile-part {
+  display: flex;
+  gap: 40%;
+  margin: 0 4rem;
+}
+
+.profile-items {
+  border: 1px solid #e8e8e8;
+  padding: 8px;
+  width: 250%;
+}
+
+p {
+  border-bottom: 1px solid #e8e8e8;
+}

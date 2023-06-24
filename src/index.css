@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family:
+    'Montserrat',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  margin: 0;
+  border-radius: 4px;
+}
+
+.container {
+  padding: 1% 4%;
+}

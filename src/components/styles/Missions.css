@@ -1,0 +1,40 @@
+.item-details {
+  display: grid;
+  grid-template-columns: 15% 50% 15% 15%;
+  gap: 10px;
+  align-items: center;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 15% 50% 15%;
+  gap: 10px;
+}
+
+.missions {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.missions td,
+.missions th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.missions tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  background: inherit;
+  border: 0.5px solid lightslategray;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.description {
+  border: none;
+  margin: 0;
+}
