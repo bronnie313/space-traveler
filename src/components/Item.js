@@ -7,8 +7,10 @@ import { joinMission, leaveMission } from './features/missions/missionsSlice';
 const Item = (props) => {
   const { active } = props || false;
   const {
-    Mission, Description, isEven, missionId,
+    Mission, Description, isEven,
   } = props;
+
+  const { missionId } = props || Math.random() * 1000;
 
   const dispatch = useDispatch();
 
@@ -22,8 +24,8 @@ const Item = (props) => {
   };
 
   return (
-    <tbody className="tbody">
-      <tr style={{ backgroundColor: isEven ? '#f2f2f2' : 'transparent' }}>
+    <tbody className="tbody" key={Math.random() * 1000}>
+      <tr style={{ backgroundColor: isEven ? '#f2f2f2' : 'transparent' }} key={Math.random() * 1000}>
         <td style={{ width: '200px' }}><h3>{Mission}</h3></td>
         <td><p className="description">{Description}</p></td>
         <td style={{ width: '120px' }}>
@@ -45,7 +47,6 @@ Item.propTypes = {
   Mission: PropTypes.string.isRequired,
   Description: PropTypes.string.isRequired,
   isEven: PropTypes.bool.isRequired,
-  missionId: PropTypes.string.isRequired,
 };
 
 export default Item;
