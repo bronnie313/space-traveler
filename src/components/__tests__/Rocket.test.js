@@ -9,7 +9,7 @@ describe('Rockets Components test suits', () => {
     const container = render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
   });

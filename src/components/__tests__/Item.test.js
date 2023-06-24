@@ -18,15 +18,15 @@ describe('Item Components test suits', () => {
             </tr>
           </thead>
           <Item
-            Mission='mission 2'
-            Description='mission 2 description'
-            missionId='2'
-            key='2'
+            Mission="mission 2"
+            Description="mission 2 description"
+            missionId="2"
+            key="2"
             isEven={false}
             active={false}
           />
         </table>
-      </Provider>
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
   });

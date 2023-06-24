@@ -9,7 +9,7 @@ describe('Missions Components test suits', () => {
     const container = render(
       <Provider store={store}>
         <Missions />
-      </Provider>
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
   });

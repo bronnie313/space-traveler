@@ -9,7 +9,7 @@ describe('Profile Components test suits', () => {
     const container = render(
       <Provider store={store}>
         <Profile />
-      </Provider>
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
   });
