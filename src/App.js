@@ -7,7 +7,6 @@ import Missions from './components/Missionslist';
 import Profile from './components/Profile';
 import NotFound from './components/NotFound/NotFound';
 import { fetchRockets } from './redux/rockets/rocketsSlice';
-import { getMissions } from './components/features/missions/missionsSlice';
 
 function App() {
   const dispatch = useDispatch();
@@ -15,9 +14,6 @@ function App() {
     dispatch(fetchRockets());
   }, [dispatch]);
 
-  useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
   return (
     <div>
       <div>
