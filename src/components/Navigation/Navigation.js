@@ -15,9 +15,15 @@ const Nav = () => (
       </div>
       <div className="nav-link">
         <ul>
-          <li><NavLink exact activeClassName="active" to="rockets">Rockets</NavLink></li>
-          <li><NavLink activeClassName="active" to="Missions">Missions</NavLink></li>
-          <li><NavLink activeClassName="active" to="profile">My Profile</NavLink></li>
+          <li>
+            <NavLink className={({ isActive }) => (isActive ? 'active' : 'none')} to="rockets">Rockets</NavLink>
+          </li>
+          <li>
+            <NavLink className={({ isActive }) => (isActive ? 'active' : 'none')} to="Missions">Missions</NavLink>
+          </li>
+          <li>
+            <NavLink className={({ isActive }) => (isActive ? 'active' : 'none')} to="profile">My Profile</NavLink>
+          </li>
         </ul>
       </div>
     </nav>
