@@ -53,3 +53,8 @@
 .avatar-div a img {
   width: 2rem;
 }
+
+.active {
+  text-decoration: underline !important;
+  color: #0291ffd6 !important;
+}

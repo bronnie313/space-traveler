@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReservedRocketItem from './Profile/ReservedRocketItem';
 
-const Reserved = ({ rockets }) => rockets.map(
+export const Reserved = ({ rockets }) => rockets.map(
   (rocket) => <ReservedRocketItem key={rocket.id} rocket={rocket} />,
 );
 
@@ -21,14 +21,14 @@ const Profile = () => {
         <h2 className="missions-title">My Missions</h2>
         <div className="profile-items">
           {
-              missionItems.map((mission) => (
-                <JoinedMission
-                  Mission={mission.mission_name}
-                  missionId={mission.mission_id}
-                  key={mission.mission_id}
-                />
-              ))
-            }
+            missionItems.map((mission) => (
+              <JoinedMission
+                Mission={mission.mission_name}
+                missionId={mission.mission_id}
+                key={mission.mission_id}
+              />
+            ))
+          }
         </div>
       </div>
       <div className="my-rockets">
@@ -42,7 +42,7 @@ const Profile = () => {
   );
 };
 
-const JoinedMission = (props) => {
+export const JoinedMission = (props) => {
   const { Mission } = props;
   return (
     <p>{Mission}</p>
