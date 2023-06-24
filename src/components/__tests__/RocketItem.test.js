@@ -1,8 +1,8 @@
-import { Provider } from "react-redux";
-import RocketItem from "../Rockets/RocketItem";
-import { render, screen, fireEvent } from "@testing-library/react";
-import store from "../features/store";
-import { createReservation } from "../../redux/rockets/rocketsSlice";
+import { Provider } from 'react-redux';
+import { render, screen, fireEvent } from '@testing-library/react';
+import RocketItem from '../Rockets/RocketItem';
+import store from '../features/store';
+import { createReservation } from '../../redux/rockets/rocketsSlice';
 
 jest.mock('../features/store');
 describe('Rocket Item Component', () => {
@@ -17,7 +17,7 @@ describe('Rocket Item Component', () => {
     const container = render(
       <Provider store={store}>
         <RocketItem rocket={rocket} />
-      </Provider>
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
     expect(screen.getByAltText('Rocket')).toHaveAttribute('src', 'image.jpg');
@@ -31,7 +31,7 @@ describe('Rocket Item Component', () => {
     render(
       <Provider store={store}>
         <RocketItem rocket={rocket} />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getByText('Reserve Rocket'));
 
@@ -46,7 +46,7 @@ describe('Rocket Item Component', () => {
     render(
       <Provider store={store}>
         <RocketItem rocket={rocket} />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getByText('Cancel Reservation'));
 

@@ -1,9 +1,8 @@
-import { render } from "@testing-library/react";
+import { render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import ReservedRocketItem from '../Profile/ReservedRocketItem';
-import { Provider } from "react-redux";
-import store from "../features/store";
-import { screen } from "@testing-library/react";
-import { Reserved, JoinedMission } from "../Profile";
+import store from '../features/store';
+import { Reserved, JoinedMission } from '../Profile';
 
 describe('ReservedRocketItem test suits', () => {
   test('Should render Reservation componet', () => {
@@ -11,10 +10,10 @@ describe('ReservedRocketItem test suits', () => {
       id: 1,
       name: 'rocket 2',
     };
-    const container = render(
+    render(
       <Provider store={store}>
         <ReservedRocketItem rocket={rocket} />
-      </Provider>
+      </Provider>,
     );
     expect(screen.getByText('rocket 2')).toBeInTheDocument();
   });
@@ -26,7 +25,7 @@ describe('JoinedMission component', () => {
     const container = render(
       <Provider store={store}>
         <JoinedMission Mission={missions} />
-      </Provider>
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
   });
@@ -38,7 +37,7 @@ describe('Missions component', () => {
     const container = render(
       <Provider store={store}>
         <Reserved rockets={reserved} />
-      </Provider>
+      </Provider>,
     );
     expect(container).toMatchSnapshot();
   });

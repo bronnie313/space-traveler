@@ -1,5 +1,5 @@
-import { render } from "@testing-library/react";
-import NotFound from "../NotFound/NotFound";
+import { render } from '@testing-library/react';
+import NotFound from '../NotFound/NotFound';
 
 describe('404 component', () => {
   test('Should render 404 component', () => {
