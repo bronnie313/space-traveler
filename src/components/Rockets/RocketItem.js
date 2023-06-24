@@ -3,7 +3,9 @@ import { useDispatch } from 'react-redux';
 import { createReservation } from '../../redux/rockets/rocketsSlice';
 
 const RocketItem = ({ rocket }) => {
-  const { id, name, description, flickr_images, reserved } = rocket; // eslint-disable-line
+  const {
+    id, name, description, reserved,
+  } = rocket;
   const dispatch = useDispatch();
 
   const handleReservation = () => {
@@ -12,7 +14,7 @@ const RocketItem = ({ rocket }) => {
   return (
     <li key={id} className="rocket-list-item">
       <div className="rocket-img-div">
-        <img src={flickr_images[0]} alt="Rocket" /> {/* eslint-disable-line */}
+        <img src={rocket.flickr_images[0]} alt="Rocket" />
       </div>
       <div>
         <h3>{name}</h3>
