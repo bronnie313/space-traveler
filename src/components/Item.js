@@ -5,8 +5,9 @@ import './styles/Item.css';
 import { joinMission, leaveMission } from './features/missions/missionsSlice';
 
 const Item = (props) => {
+  const { active } = props || false;
   const {
-    Mission, Description, isEven, missionId, active,
+    Mission, Description, isEven, missionId,
   } = props;
 
   const dispatch = useDispatch();
@@ -45,7 +46,6 @@ Item.propTypes = {
   Description: PropTypes.string.isRequired,
   isEven: PropTypes.bool.isRequired,
   missionId: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
 };
 
 export default Item;
